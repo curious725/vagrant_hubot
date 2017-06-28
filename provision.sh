@@ -31,3 +31,8 @@ dpkg -s libexpat1-dev &>/dev/null || {
 	apt-get install libexpat1-dev
 }
 
+cp /vagrant/upstart/myhubot.conf /etc/init/myhubot.conf
+
+sudo -u vagrant -i sh -c 'cd /vagrant/myhubot; npm install'
+
+service myhubot restart
