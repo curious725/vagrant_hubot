@@ -22,3 +22,6 @@ dpkg -s nodejs &>/dev/null || {
 	# ln -s /usr/bin/nodejs /usr/bin/node
 }
 
+command -v yo hubot &>/dev/null || {
+	npm install -g yo generator-hubot
+}
